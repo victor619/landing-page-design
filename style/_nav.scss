@@ -102,7 +102,7 @@ input{
         }
 
         &:checked ~ .nav-items{
-            clip-path:circle(200% at 300px -290px);
+            clip-path:circle(200% at 300px 15px);
             transition-property: clip-path;
             transition-duration: 0.7s;
             transition-timing-function:ease-in;
