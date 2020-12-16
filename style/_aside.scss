@@ -1,0 +1,41 @@
+aside{
+    height:200px;
+    background-image:url(./../img/finance6.jpg);
+    background-position: cneter;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color:$primary-font-color;
+    .wrap{
+        display:flex;
+        justify-content:space-evenly;
+        align-items: center;
+        h1{
+            font-size: 40px;
+            width:18ch;
+           }     
+        a{
+            color:$primary-font-color;
+            border:1px solid grey;
+            padding:10px;
+            &:active{
+                color :$primary;
+                background-color:$background;
+            }
+        }
+    }
+}
+
+@media(max-width:700px){
+    aside{
+        .wrap{
+          flex-direction:column;  
+          h1{
+          font-size: 30px;
+          width:auto;
+          text-align: center;
+
+         }        
+        }
+    }
+}

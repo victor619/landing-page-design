@@ -1,0 +1,41 @@
+$primary:rgb(0, 0, 99);
+$secondary:rgb(40, 40, 255);
+$background:white;
+$primary-font-color:rgba(34, 34, 34, 0.849);
+$secondary-font-color:rgb(255, 255, 255);
+$tertiary-font-color:rgb(131, 131, 131);
+$icon-color:rgb(172, 172, 172);
+
+
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+nav,header,section,aside,footer{
+    width:100%;
+}
+
+.wrap{
+    width:70%;
+    height:100%;
+    margin:auto;
+}
+
+img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+a{
+    text-decoration:none;
+}
+
+@import 'header';
+@import 'nav';
+@import 'section';
+@import 'aside';
+@import 'footer';
+
+

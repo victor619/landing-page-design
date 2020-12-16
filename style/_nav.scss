@@ -1,0 +1,138 @@
+nav{
+     padding-top:15px;
+     padding-bottom:15px;
+    .wrap{
+        display:flex;
+        justify-content: space-between;
+    }
+}
+
+
+.bar{
+    width:40px;
+    height: 40px;
+    display: none;
+    &>div{
+        border:1px solid grey;
+        margin-top:5px;
+        width:60%;
+    }
+}
+
+input{
+    position: absolute;
+    width:40px;
+    height:40px;
+    z-index:4;
+    right: 0px;
+    display:none;
+}
+.logo{
+    padding-top:5px;
+    h4{
+      a{
+          color:$tertiary-font-color;
+        span{
+            color:$primary;
+        }
+      }
+    }
+  
+}
+.nav-items{
+    width:100%;
+    ul{
+        text-align:right;
+        list-style-type:none;
+        li{
+            display:inline;
+            a{
+                color:$tertiary-font-color;
+                padding:10px;
+                &:hover{
+                color : $primary;
+                }
+            }
+
+           
+
+
+        }
+    }
+}
+
+
+
+@media(max-width:700px){
+  nav{
+      .wrap{
+          position:relative;
+          .bar{
+            display:block;
+            position:relative;
+            z-index:3;
+            &>div{
+                width:60%;
+                border:1px solid $tertiary-font-color;
+                transition: transform;
+                transition-duration: 0.95s;
+                transition-timing-function:cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+        
+        }
+        input{
+            display:block;
+            opacity:0%;
+
+            &:checked ~ .bar>div{
+                position:absolute;
+                width:100%;
+                margin-top:10px;
+            }
+        &:checked ~ .bar .rotate:nth-of-type(1){
+            transform:rotate(45deg);
+        }
+
+        &:checked ~ .bar .rotate:nth-of-type(2){
+            display: none;
+        }
+
+        &:checked ~ .bar .rotate:nth-of-type(3){
+            transform:rotate(-45deg);
+        }
+
+        &:checked ~ .nav-items{
+            clip-path:circle(200% at 300px -290px);
+            transition-property: clip-path;
+            transition-duration: 0.7s;
+            transition-timing-function:ease-in;
+        }
+        }
+        .nav-items{
+            clip-path:circle(0% at 280px 15px);
+            background-color:$background;
+            position: absolute;
+            width:100%;
+            height: 100vh;
+            
+            ul{
+                width:100%;
+                height: 70%;  
+                display:flex;
+                flex-direction:column;
+                justify-content: center; 
+                align-self:center;
+                align-items:center;
+                li{
+                    padding:20px;
+                    width:80%;
+                    text-align:left;
+                    border-bottom:1px solid $primary;
+                }
+            }
+        }
+      }
+  }
+
+
+}
